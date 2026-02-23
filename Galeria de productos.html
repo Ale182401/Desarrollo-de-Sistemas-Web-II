@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Productos</title>
+    <style>
+        body {
+            background-color: rgb(238, 238, 238); 
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .filtros, .ordenar {
+            margin-bottom: 20px;
+        }
+
+        .filtros label, .ordenar label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+        }
+
+        .producto {
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .producto img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .producto h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .producto p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .producto button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .producto button:hover {
+            background-color: #ff6600;
+        }
+
+        .etiqueta {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .paginacion {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .paginacion a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .paginacion a:hover {
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería de Productos</h1>
+
+    <div class="filtros">
+        <label>Categoría:</label>
+        <select>
+            <option>Todos</option>
+            <option>Electrónica</option>
+            <option>Ropa</option>
+            <option>Hogar</option>
+        </select>
+
+        <label>Precio:</label>
+        <select>
+            <option>Todos</option>
+            <option>Menos de $500</option>
+            <option>$500 - $1000</option>
+            <option>Más de $1000</option>
+        </select>
+    </div>
+
+    <div class="ordenar">
+        <label>Ordenar por:</label>
+        <select>
+            <option>Relevancia</option>
+            <option>Precio</option>
+            <option>Popularidad</option>
+        </select>
+    </div>
+
+    <div class="galeria">
+        <div class="producto">
+            <span class="etiqueta">Nuevo</span>
+            <img src="Img/producto1.jpg" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>$800 MXN</p>
+            <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+            <span class="etiqueta">Descuento</span>
+            <img src="Img/producto2.jpg" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>$600 MXN</p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <span class="etiqueta">Popular</span>
+            <img src="Img/producto3.jpg" alt="Producto 3">
+            <h3>Producto 3</h3>
+            <p>$1200 MXN</p>
+            <button>Ver más</button>
+        </div>
+    </div>
+    <div class="paginacion">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Siguiente</a>
+    </div>
+</body>
+</html>
+

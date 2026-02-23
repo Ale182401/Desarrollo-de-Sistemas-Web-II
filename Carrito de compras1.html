@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e2c5df;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #333;
+            color: white;
+        }
+
+        table img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .resumen {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        .resumen h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .resumen p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+
+        .envio {
+            margin-bottom: 20px;
+        }
+
+
+        .cupon {
+            margin-bottom: 20px;
+        }
+
+        .cupon input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        .cupon button {
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cupon button:hover {
+            background-color: #ff6600;
+        }
+
+
+        .acciones {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .acciones button {
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .acciones .seguir {
+            background-color: #ccc;
+        }
+
+        .acciones .pago {
+            background-color: #333;
+            color: white;
+        }
+
+        .acciones .pago:hover {
+            background-color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrito de Compra</h1>
+
+    <table>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Precio Unitario</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+        </tr>
+        <tr>
+            <td><img src="Img/producto1.jpg" alt="Producto 1"></td>
+            <td>Producto 1</td>
+            <td>$500 MXN</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>$500 MXN</td>
+            <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+            <td><img src="Img/producto2.jpg" alt="Producto 2"></td>
+            <td>Producto 2</td>
+            <td>$300 MXN</td>
+            <td><input type="number" value="2" min="1"></td>
+            <td>$600 MXN</td>
+            <td><button>Eliminar</button></td>
+        </tr>
+    </table>
+
+    <div class="resumen">
+        <h2>Resumen del Pedido</h2>
+        <p>Subtotal: $1100 MXN</p>
+        <p>Impuestos: $176 MXN</p>
+        <p>Envío: $100 MXN</p>
+        <p><strong>Total: $1376 MXN</strong></p>
+    </div>
+    
+    <div class="envio">
+        <h3>Opciones de Envío</h3>
+        <select>
+            <option>Estándar - $100 MXN</option>
+            <option>Express - $200 MXN</option>
+            <option>Gratis (compras mayores a $1500)</option>
+        </select>
+    </div>
+
+    <div class="cupon">
+        <h3>Aplicar Cupón</h3>
+        <input type="text" placeholder="Ingresa tu cupón">
+        <button>Aplicar</button>
+    </div>
+
+    <div class="acciones">
+        <button class="seguir">Seguir comprando</button>
+        <button class="pago">Proceder al pago</button>
+    </div>
+</body>
+</html>
